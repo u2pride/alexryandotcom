@@ -3,6 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Rambla:400,700|Josefin+Sans:100,300,400|Kalam:700);
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100);
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -5928,6 +5929,7 @@ button.close {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  float: none !important;
 }
 .pull-right {
   float: right !important;
@@ -7901,6 +7903,13 @@ black {
   -moz-box-shadow: 0 6px 6px -6px #808080;
   box-shadow: 0 6px 6px -6px #808080;
 }
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+.center-block {
+  float: none !important;
+}
 #header {
   background-size: cover;
   min-height: 800px;
@@ -7980,9 +7989,9 @@ black {
   height: 100%;
 }
 #aboutme {
-  min-height: 250px;
+  min-height: 300px;
   background-color: #fff;
-  padding: 0em;
+  padding: 2em;
   margin: 0em;
 }
 #aboutme .profilepic {
@@ -7995,7 +8004,7 @@ black {
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  min-height: 500px;
+  min-height: 650px;
 }
 @media (min-width: 992px) {
   #aboutme .profilepic {
@@ -8009,7 +8018,8 @@ black {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 2em;
-  padding-left: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 @media (min-width: 992px) {
   #aboutme .aboutmetext {
@@ -8018,16 +8028,18 @@ black {
   }
 }
 #aboutme .aboutmetext h1 {
-  font-size: 3em;
-  font-weight: 500;
+  font-size: 3.5em;
+  font: 'Open Sans', sans-serif;
+  font-weight: 300;
+  padding-bottom: 0.5em;
 }
 #aboutme .aboutmetext p {
   font-size: 2em;
-  padding-right: 1em;
+  padding-right: 0em;
   color: #707070;
 }
 #aboutme .aboutmetext .latesttweets {
-  background-color: #b0b0b0;
+  background-color: #00788D;
   margin-top: 2.5em;
   border-radius: 4px;
   margin-bottom: 2em;
@@ -8039,6 +8051,7 @@ black {
   padding-right: 15px;
   padding-left: 0.8em;
   padding-top: 0.3em;
+  color: #fff;
 }
 @media (min-width: 992px) {
   #aboutme .aboutmetext .latesttweets i {
@@ -8063,6 +8076,105 @@ black {
     float: left;
     width: 83.33333333%;
   }
+}
+#aboutme .aboutmetext .connectwithme #outsidelinks {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  float: none !important;
+  box-shadow: 0px 0px 7px #888;
+}
+#aboutme .aboutmetext .connectwithme .outsidelink {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: none;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  #aboutme .aboutmetext .connectwithme .outsidelink {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+#aboutme .aboutmetext .connectwithme .outsidelink2 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: none;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  #aboutme .aboutmetext .connectwithme .outsidelink2 {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+#aboutme .aboutmetext .connectwithme i {
+  text-align: center;
+  width: 100%;
+  padding-top: 0em;
+  padding-bottom: 0.3em;
+}
+#aboutme .aboutmetext .connectwithme h1 {
+  font: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  color: #00788D;
+  text-align: center;
+}
+#aboutme .aboutmetext .connectwithme p {
+  font: 'Lato', sans-serif;
+  font-weight: 200;
+  font-size: 1.2em;
+  color: #00788D;
+  text-align: center;
+}
+.box h3 {
+  text-align: center;
+  position: relative;
+  top: 80px;
+}
+.box {
+  width: 70%;
+  height: 200px;
+  background: #FFF;
+  margin: 40px auto;
+}
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect7 {
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect7:before,
+.effect7:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.effect7:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
 }
 .middle .container {
   background-color: #fff;
@@ -8298,8 +8410,8 @@ black {
   }
 }
 #iosapp .feature h4 {
-  font-weight: 400;
-  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.5em;
   padding-left: 10px;
 }
