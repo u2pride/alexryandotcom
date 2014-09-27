@@ -5,6 +5,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=Arvo);
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -8291,8 +8292,63 @@ black {
   margin-top: 2em;
   margin-bottom: 5em;
 }
+#projectgallery {
+  background: url('../img/travel.png');
+  background-size: contain;
+}
+#projectgallery h1 {
+  font-family: 'Lato';
+  text-align: center;
+  font-size: 3em;
+  font-weight: 700;
+}
+#projectgallery .projecthighlight {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding: 2em;
+}
+@media (min-width: 992px) {
+  #projectgallery .projecthighlight {
+    float: left;
+    width: 33.33333333%;
+  }
+}
+#projectgallery .projecthighlight .box {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 1.5em;
+}
+#projectgallery .projecthighlight .box h2 {
+  text-align: center;
+  border-top: 3px solid #000000;
+  padding-top: 0.5em;
+  margin: 0em;
+}
+#projectgallery .projecthighlight .box .projectimage {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 250px;
+  overflow: hidden;
+  position: static;
+}
+#projectgallery .projecthighlight .box .project1 {
+  background-image: url('../img/project1.png');
+}
+#projectgallery .projecthighlight .box .project2 {
+  background-image: url('../img/project2.png');
+}
+#projectgallery .projecthighlight .box .project3 {
+  background-image: url('../img/project3.png');
+}
+#projectgallery .projecthighlight .box p {
+  text-align: center;
+}
 #iosapp {
-  margin-top: 3em;
+  margin-top: 0em;
   padding-bottom: 3em;
   background-color: #fff;
 }
@@ -8302,9 +8358,6 @@ black {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  -webkit-box-shadow: 0 6px 6px -6px #808080;
-  -moz-box-shadow: 0 6px 6px -6px #808080;
-  box-shadow: 0 6px 6px -6px #808080;
   background: url('../img/wakeIphone.png');
   border-radius: 1px;
   background-position: center;
@@ -8387,8 +8440,8 @@ black {
   }
 }
 #iosapp .feature h4 {
-  font-weight: 300;
-  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 1.5em;
   padding-left: 10px;
 }
@@ -8406,7 +8459,7 @@ black {
 @media (min-width: 992px) {
   #iosapp .feature h4 {
     /* rules for desktop (992 > 1200) */
-    font-size: 3em;
+    font-size: 3.5em;
   }
 }
 @media (min-width: 1200px) {
