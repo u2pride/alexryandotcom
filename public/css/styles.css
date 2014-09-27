@@ -4,6 +4,7 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100);
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400);
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -7862,7 +7863,7 @@ h4 {
   font-weight: 300;
 }
 p {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
 body {
@@ -8029,12 +8030,12 @@ black {
 }
 #aboutme .aboutmetext h1 {
   font-size: 3.5em;
-  font: 'Open Sans', sans-serif;
+  font: 'Josefin Sans', sans-serif;
   font-weight: 300;
   padding-bottom: 0.5em;
 }
 #aboutme .aboutmetext p {
-  font-size: 1.8em;
+  font-size: 1.7em;
   padding-right: 0em;
   color: #707070;
 }
@@ -8050,7 +8051,7 @@ black {
   padding-left: 15px;
   padding-right: 15px;
   padding-left: 0.8em;
-  padding-top: 0.3em;
+  padding-top: 0.2em;
   color: #fff;
 }
 @media (min-width: 992px) {
@@ -8064,12 +8065,11 @@ black {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 0.5em;
+  padding-top: 0.7em;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #fff;
-  font: 'Open Sans';
 }
 @media (min-width: 992px) {
   #aboutme .aboutmetext .latesttweets p {
@@ -8079,6 +8079,11 @@ black {
 }
 #aboutme .aboutmetext .connectwithme .outsidelink {
   box-shadow: 0px 0px 7px #888;
+}
+#aboutme .aboutmetext .connectwithme .outsidelink:hover {
+  cursor: pointer;
+  cursor: hand;
+  opacity: 0.8;
 }
 #aboutme .aboutmetext .connectwithme i {
   text-align: center;
@@ -8093,12 +8098,16 @@ black {
   color: #00788D;
   text-align: center;
 }
-#aboutme .aboutmetext .connectwithme p {
-  font: 'Lato', sans-serif;
+#aboutme .aboutmetext .connectwithme a {
   font-weight: 200;
-  font-size: 1.2em;
+  font-size: 1.0em;
   color: #00788D;
+  width: 100%;
+  margin: 0 auto;
+  float: none;
+  display: inline-block;
   text-align: center;
+  margin-bottom: 1.5em;
 }
 .box h3 {
   text-align: center;
@@ -8474,6 +8483,15 @@ black {
     width: 33.33333333%;
   }
 }
+#travelhighlight p {
+  font-family: 'Merienda One', sans-serif;
+  font-size: 3em;
+  padding-top: 7em;
+  padding-right: 100px;
+  padding-left: 100px;
+  text-align: center;
+  color: #fff;
+}
 /* Attempt at LESS/Bootstrap
 #iosapp {
     
@@ -8595,7 +8613,7 @@ black {
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  min-height: 400px;
+  min-height: 200px;
   cursor: default;
   position: relative;
   transition: all 0.4s ease-in-out;
