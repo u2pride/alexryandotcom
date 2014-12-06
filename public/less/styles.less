@@ -103,7 +103,7 @@ black {
 
 .prlx-1{ 
     background: url('../img/header.png') repeat; 
-    min-height: 200px;
+    min-height: 1500px;
     width: 100%;
     background-size: cover;
 }
@@ -125,6 +125,27 @@ black {
 
 
 
+.hiddentwo {
+	opacity: 0;
+}
+
+.visibletwo {
+	opacity: 1;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container {
+    .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+
 // ----------------------------------------------- HEADER LESS ------------------------------------------------------------
 
 
@@ -132,6 +153,20 @@ black {
     background-size: cover;
     min-height: 800px;
     width:100%;
+    
+    .name {
+        animation-delay: 0.5s;
+        -webkit-animation-delay: 0.5s; /* Safari and Chrome */
+        animation-duration: 3s;
+        -webkit-animation-duration: 3s; /* Safari and Chrome */
+    }
+    
+    .bio {
+        animation-delay: 1.5s;
+        -webkit-animation-delay: 1.5s; /* Safari and Chrome */
+        animation-duration: 4.5s;
+        -webkit-animation-duration: 4.5s; /* Safari and Chrome */
+    }
 
     h1 {
         padding: 1em 0em 0em 0em;
@@ -154,7 +189,7 @@ black {
         color: #fff;
         font-family: 'Kalam', sans-serif;
         font-size: 2em;
-        font-weight: 300;
+        font-weight: 100;
         line-height: 1;
         text-shadow: 0 1px 2px rgba(0,0,0,.2);
         @media (min-width:@screen-tablet) {
@@ -178,6 +213,7 @@ black {
 #imageIcons {
     margin-top: 2em;
     color: white;
+    visibility: hidden;
 
     img {
         margin-left: auto;
@@ -223,76 +259,36 @@ black {
 #aboutme {
     min-height: 300px;
     background-color: #fff;
-    padding: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
     margin: 0em;
-    
-    
 
     
-    .profilepic {
-        .make-md-column(6);
-
-        background-image: url('../img/profile.png');
-        background-repeat: no-repeat;
-        overflow: hidden;
-        background-size: cover;
-        background-position: center;
-        min-height: 650px;
-    }
-    
-    .aboutmetext {
+    .profilepicandlinks {
         .make-md-column(6);
         
-        padding-top: 2em;
-        padding-left: 1em;
-        padding-right: 1em;
-        
-        
-        h1 {
-            font-size: 3.5em;
-            font: 'Josefin Sans', sans-serif;
-            font-weight: 300;
-            padding-bottom: 0.5em;
-        }
-    
-        h2 {
-        }
-    
-        p {
-            font-size: 1.7em;
-            padding-right: 0em;
-            color: #707070;
-        }
-        
-        .latesttweets {
-            
-            background-color: #00788D;
-            margin-top: 2.5em;
-            border-radius: 4px;
-            margin-bottom: 2em;
-            
-            i {
-                .make-md-column(2);
-                padding-left: 0.8em;
-                padding-top: 0.2em;
-                color: #fff;
+        animation-duration: 3s;
+        -webkit-animation-duration: 3s;
 
-            }
-            p {
-                .make-md-column(10);
-                
-                padding-top: 0.7em;
-                padding-left: 1.5em;
-                padding-right: 1.5em;
-                font-size: 1.2em;
-                color: #fff;
-                
-            }
+        animation-delay: 1s;
+        -webkit-animation-delay: 1s;
+
+        background-color: #0ff;
+        position: relative;
         
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
         }
         
         .connectwithme {
             
+            position: absolute;
+            top: 23em;
+            margin: 0 auto;
+            animation-delay: 1.7s;
+            -webkit-animation-delay: 1.7s; /* Safari and Chrome */
             
             .outsidelink {
                 box-shadow: 0px 0px 7px #888;
@@ -302,6 +298,14 @@ black {
                     cursor: hand;
                     opacity: 0.8;
                 }
+            }
+            
+            p {
+                font-family: 'Kalam';
+                font-weight: 100;
+                font-size: 4em;
+                color: #00788D;
+                text-align: center;
             }
             
             i {
@@ -334,27 +338,77 @@ black {
             
         }
     }
+    
+
+
+    .aboutmetext {
+        .make-md-column(6);
+        
+        padding-top: 2em;
+        padding-left: 2em;
+        padding-right: 1em;
+        margin-bottom: 7em;
+        
+        
+        h1 {
+            font-size: 5.5em;
+            font: 'Lato','Josefin Sans', sans-serif;
+            font-weight: 100;
+            padding-bottom: 0.3em;
+        }
+    
+        h2 {
+        }
+    
+        p {
+            font-size: 1.7em;
+            padding-right: 0em;
+            color: #707070;
+        }
+        
+        .latesttweets {
+            
+            background-color: #00788D;
+            margin-top: 3em;
+            border-radius: 4px;
+            margin-bottom: 4em;
+            
+            i {
+                .make-md-column(2);
+                padding-left: 0.8em;
+                padding-top: 0.2em;
+                color: #fff;
+
+            }
+            p {
+                .make-md-column(10);
+                
+                padding-top: 0.7em;
+                padding-left: 1.5em;
+                padding-right: 1.5em;
+                font-size: 1.2em;
+                color: #fff;
+                
+            }
+        
+        }
+        
+    }
 
 
 }
+
+
+/*==================================================
+ * Currently not being used
+ * ===============================================*/
 
 // BOX SHADOW EFFECT
 
-.box h3{
-	text-align:center;
-	position:relative;
-	top:80px;
-}
-.box {
-	width:70%;
-	height:200px;
-	background:#FFF;
-	margin:40px auto;
-}
 
-/*==================================================
- * Effect 2
- * ===============================================*/
+
+
+
 .effect7
 {
   	position:relative;       
@@ -388,12 +442,6 @@ black {
             transform:skew(8deg) rotate(3deg);
 }
 
-
-
-
-// ----------------------------------------------- PROJECTS LESS ------------------------------------------------------------
-
-
 .middle .container {
     background-color: #fff;
     background-size: contain;
@@ -412,157 +460,6 @@ black {
 
 }
 
-#inspiration {
-    background: url('../img/peoplebackground.png');
-    background-size: contain;
-    background-color: #343434;
-
-    h1 {
-        color: #fff;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        width: 100%;
-        text-align: center;
-        font-family: 'Vibur';
-        font-size: 5em;
-    }
-
-    h2 {
-        color: #fff;
-        text-align: center;
-        margin-bottom: 2em;
-        margin-left: 4em;
-        margin-right: 4em;
-        font-family: 'Merienda One', sans-serif;
-        font-size: 2.5em;
-        font-weight: 300;
-    }
-
-    h3 {
-        color: #fff;
-        text-align: center;
-        margin-bottom: 1em;
-        margin-left: 0em;
-        margin-right: 0em;
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 3em;
-        font-weight: 100;
-    }
-
-    p {
-        color: #fff;
-        text-align: center;
-        margin-bottom: 1em;
-        font-family: 'Josefin Sans', sans-serif;
-        font-size: 1.2em;
-        font-weight: 300;
-    }
-}
-
-
-
-#projects .container-fluid .col-md-3 {
-    background-position: center center;
-}
-
-#projects .container-fluid .col-md-3 img {
-    background-size: cover;
-    overflow: hidden;
-    height: auto;
-    width: 100%;
-}
-
-
-
-// ----------------------------------------------- INSPIRATION LESS ------------------------------------------------------------
-
-
-
-.people {
-    text-align: center;
-    width: 100%;
-}
-
-.person {
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 250px;
-    overflow: hidden;
-    position: relative;
-    cursor: default;
-    transition: all 0.4s ease-in-out;
-}
-
-.person-1 {
-   background-image:url('../img/elon.jpg');
-} 
-
-.person-2 {
-   background-image:url('../img/craigalexander.jpg');
-} 
-
-.person-3 {
-   background-image:url('../img/bono.jpg');
-} 
-
-.person-4 {
-   background-image:url('../img/louie.jpg');
-} 
-
-.person-info {
-    position: absolute;
-    background: rgba(63,147,147, 0.8);
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
-    transform: scale(0);
-}
-
-.person-info h3 {
-    color: #fff;
-    padding: 1em 0em 0em 0em;
-}
-
-.person-info p {
-    color: #fff;
-    padding: 10px 5px;
-    font-style: italic;
-    margin: 0 20px;
-    font-size: 1em;
-    border-top: 1px solid rgba(255,255,255,0.5);
-    opacity: 0;
-    transition: all 1s ease-in-out 0.4s;
-}
-
-.person:hover .person-info {
-    transform: scale(0.9);
-    opacity: 1;
-}
-.person:hover .person-info p {
-    opacity: 1;
-}
-
-
-
-#projects hr {
-    margin-top: 1em;  
-    margin-bottom: 2em;
-    margin-left: 5em;
-    margin-right: 5em;        
-    height: 2px;
-    border-radius: 3px;
-    background-color:#f3f6db;
-    color:#f3f6db;
-}
-
-#projects .lasthr {
-    color: #fff;
-    text-align: center;
-    margin-top: 2em;
-    margin-bottom: 5em;
-}
 
 
 // ----------------------------------------------- Projects LESS ------------------------------------------------------------
@@ -571,23 +468,158 @@ black {
    
     background: url('../img/travel.png');
     background-size: contain;
+    box-shadow: inset 0px 10px 20px -2px rgba(0,0,0,0.6);
 
     h1 {
-        font-family: 'Lato'; 
+        font-family: 'Vibur'; 
         text-align: center;
-        font-size: 3em;
-        font-weight: 700;
+        font-size: 6em;
+        font-weight: 100;
+        color: #fff;
+        margin-top: 0.3em;
+    }
+    
+    .firstrowprojects {
+        animation-delay: 2.5s;
+        -webkit-animation-delay: 4.5s; /* Safari and Chrome */    
+        animation-duration: 0.5s;
+        -webkit-animation-duration: 0.5s; /* Safari and Chrome */ 
+
+    }
+    
+    .secondrowprojects {
+        animation-delay: 2.5s;
+        -webkit-animation-delay: 4.5s; /* Safari and Chrome */ 
+        animation-duration: 0.5s;
+        -webkit-animation-duration: 0.5s; /* Safari and Chrome */ 
+
     }
     
     .projecthighlight{
         .make-md-column(4);
         padding: 2em;
         
-        .box {
+        .view {
+            width: 100%;
+            height: 100%;
+            float: left;
+            border: 1px solid #fff;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            cursor: default;
+            background: #fff url(../img/timkeller.jpg) no-repeat center center;            
+            
+            
+            h2 {
+                text-align: center;
+                position: relative;
+                font-size: 17px;
+                padding: 10px;
+                background: rgba(0,0,0, 0.8);
+                margin: 20px 0 0 0;
+            }
+            
+            p {
+                font-size: 1.25em;
+                position: relative;
+                color: #fff;
+                padding: 15px 20px 10px;
+                text-align: center;
+            }
+            
+            img {
+                display: block;
+                position: relative;
+            }
+            
+            a.info {
+                display: inline-block;
+                padding: 5px 14px;
+                background: rgba(0,0,0, 0.4);
+                color: #fff;
+                box-shadow: 0 0 1px #000;
+            }
+            
+            a.info:hover {
+                box-shadow: 0 0 5px #000;   
+            }
+        }
+        
+        
+        .view .mask, .view .content {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+        
+        .vieweffectz {
+        
+            img {
+                transform: scaleY(1);
+                transition: all 0.7s ease-in-out;
+            }
+        
+            .mask {
+                background-color: rgba(255, 255, 255, 0.9);
+                transition: all 0.5s linear;
+                opacity: 0;
+            }
+            
+            h2 {
+                border-bottom: 1px solid rgba(0,0,0,0.3);
+                background: transparent;
+                margin: 20px 40px 0 40px;
+                transform: scale(0);
+                color: #333;
+                transition: all 0.5s linear;
+                opacity: 0;
+            }
+            
+            p {
+                color: #333;
+                opacity: 0;
+                transform: scale(0);
+                transition: all 0.5s ease-in;
+            }
+            
+            a.info {
+                opacity: 0;
+                transform: scale(0);
+                transition: all 0.5s linear;
+            }
+        
+        
+        }
+        
+        .vieweffectz:hover img {
+            transform: scale(10);
+            opacity: 0;
+        }
+        
+        .vieweffectz:hover .mask {
+            opacity: 1;   
+        }
+        
+        .vieweffectz:hover h2,
+        .vieweffectz:hover p,
+        .vieweffectz:hover a.info {
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+
+        
+        
+        .box {            
             width: 100%;
             height: 100%;
             background-color: #fff;
             border-radius: 1.5em;
+            margin:40px auto;
             
             h2 {
                 text-align: center;   
@@ -638,10 +670,10 @@ black {
 #iosapp {
     margin-top: 0em;
     padding-bottom: 3em;
-    background-color: #fff;
-;
+    background-color: rgba(255,255,255,1.0);
+    box-shadow: inset 0px 10px 20px -2px rgba(0,0,0,0.6);
 
-    #appimage {
+    .appimage {
         .make-md-column(4);
         .make-xs-column(12);
         //.one-edge-shadow();
@@ -730,7 +762,7 @@ black {
             }
             @media (min-width: @screen-md-min) {
                 /* rules for desktop (992 > 1200) */
-                font-size: 3.5em;        
+                font-size: 2.5em;        
             }
             @media (min-width: @screen-lg-min) {
                 /* rules for large desktop (> 1200) */
@@ -753,7 +785,7 @@ black {
             }
             @media (min-width: @screen-md-min) {
                 /* rules for desktop (992 > 1200) */
-                font-size: 2em;
+                font-size: 1.5em;
             }
             @media (min-width: @screen-lg-min) {
                 /* rules for large desktop (> 1200) */
@@ -775,20 +807,175 @@ black {
 }
 
 
-#travelhighlight {
-    p {
-        font-family: 'Merienda One', sans-serif;
-        font-size: 3em;
-        padding-top: 7em;
-        padding-right: 100px;
-        padding-left: 100px;
-        text-align: center;
+
+// ----------------------------------------------- INSPIRATION LESS ------------------------------------------------------------
+
+#inspiration {
+    background: url('../img/peoplebackground.png');
+    background-size: contain;
+    background-color: #343434;
+    box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.6);
+
+
+    h1 {
         color: #fff;
-    } 
-    
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 100%;
+        text-align: center;
+        font-family: 'Vibur';
+        font-size: 5em;
+    }
+
+    h2 {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 2em;
+        margin-left: 4em;
+        margin-right: 4em;
+        font-family: 'Merienda One', sans-serif;
+        font-size: 2.5em;
+        font-weight: 300;
+    }
+
+    h3 {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 1em;
+        margin-left: 0em;
+        margin-right: 0em;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 3em;
+        font-weight: 100;
+    }
+
+    p {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 1em;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.2em;
+        font-weight: 300;
+    }
+}
+
+.people {
+    text-align: center;
+    width: 100%;
+}
+
+.person {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    transition: all 0.4s ease-in-out;
 }
 
 
+
+.person-info {
+    position: absolute;
+    background: rgba(63,147,147, 0.8);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    transform: scale(0);
+}
+
+.person-1 {
+   background-image:url('../img/elonmono.jpg');
+} 
+
+.person-2 {
+   background-image:url('../img/craigalexander.jpg');
+} 
+
+.person-3 {
+    background-image:url('../img/bono.jpg');
+    box-shadow: inset 10px 0px 10px -2px rgba(0,0,0,0.5);
+
+} 
+
+.person-4 {
+   background-image:url('../img/louiemono.jpg');
+} 
+
+.person-5 {
+    background-image:url('../img/antonmono.jpg');
+    p {
+        font-size: 3em;
+    }
+}
+
+.person-6 {
+    background-image:url('../img/timkeller2mono.jpg');
+    box-shadow: inset 10px 0px 10px -2px rgba(0,0,0,0.5);
+    p {
+        font-size: 3em;
+    }
+}
+
+.person-info h3 {
+    color: #fff;
+    padding: 1em 0em 0em 0em;
+}
+
+.person-info p {
+    color: #fff;
+    padding: 10px 5px;
+    font-style: italic;
+    margin: 0 20px;
+    font-size: 1em;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    opacity: 0;
+    transition: all 1s ease-in-out 0.4s;
+}
+
+.person:hover .person-info {
+    transform: scale(0.9);
+    opacity: 1;
+}
+.person:hover .person-info p {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+//Background Montana Image and Quote
+#travelhighlight {
+    h1 {
+        font-family: 'Merienda One', sans-serif;
+        font-size: 3em;
+        margin-top: 20em;
+        padding-right: 100px;
+        padding-left: 100px;
+        text-align: left;
+        color: #fff;
+        
+    } 
+    
+    p {
+        font-family: 'Lato', sans-serif;
+        font-size: 2em;
+        margin-top: 1em;
+        margin-bottom: 4em;
+        padding-right: 18em;
+        padding-left: 100px;
+        text-align: left;
+        color: #fff;
+        
+    } 
+    
+}
 
 /* Attempt at LESS/Bootstrap
 #iosapp {
@@ -908,11 +1095,6 @@ black {
 
 
 
-
-
-
-
-
 #travel {
 }
 #travel h2 {
@@ -976,3 +1158,33 @@ black {
 }
 
 
+
+
+
+
+
+
+#footer {
+    background-color: #ffffff;
+    box-shadow: inset 0px 10px 20px -2px rgba(0,0,0,0.6);
+
+    
+    p {
+        text-align: center;
+        font-size: 1.4em;
+        margin: 3em;
+        font-family: "Lato";
+    }
+}
+
+.project5 {
+    background-image: url('../img/project5.png');
+}
+
+.project4 {
+    background-image: url('../img/project4.png');
+}
+
+.project6 {
+    background-image: url('../img/project6.png');
+}

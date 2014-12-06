@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/customjavascript.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     
     <script type="text/javascript">
 			$(document).ready(function() {
@@ -18,7 +18,7 @@
 					$('*[class^="prlx"]').each(function(r){
 						var pos = $(this).offset().top;
 						var scrolled = $(window).scrollTop();
-				    	$('*[class^="prlx"]').css('top', -(scrolled * 0.15) + 'px');			
+				    	$('*[class^="prlx"]').css('top', -(scrolled * 0.2) + 'px');			
 				    });
 				});
 			});
@@ -28,6 +28,7 @@
     
 <body>
     
+    
     <div id="header">
     <div class="container-fluid">
         
@@ -35,14 +36,15 @@
         
         <div class="row">
             
-        <div class="col-md-6 col-sm-12 testclass">
+        <div class="col-md-6 col-sm-12 name animated fadeIn">
             <h1 id="name">Alex Ryan</h1>
         </div>
-        <div class="col-md-6 col-sm-12 testclass2">
-            <h2>Student. Athlete. <br>Passionate. About. <br>Sustainability.</h2>
+        <div class="col-md-6 col-sm-12 bio animated fadeIn">
+            <h2>Student @ Clemson. <br>Wannabe Designer. <br>Once a Runner. </h2>
         </div>
         </div>
         
+        <!--
         <div id="aboutmetext">
             <p> </p>
         </div>
@@ -80,6 +82,7 @@
             </div>
         </div>
         </div>
+-->
         
     </div>
     </div>
@@ -89,49 +92,59 @@
         <div class="container-fluid">
         
             <div class="row nopadding">
-                <div class="profilepic"></div>
-            
-                <div class="aboutmetext">
-                    <h1>What's up?</h1>
-                    <p>I'm a student at Clemson University. My interests vary and never fail in keeping me busy.... climate change, Jesus, programming, endurance events, and friends. After Clemson, I hope to attend my dream school, Stanford University, for graduate school.</p>
-                    
-                    <div class="latesttweets">
-                        <div class="row">
-                            <i class="fa fa-twitter fa-4x"></i>
-                            <p>Listen to those that don't share the same worldview as you.  You might just learn something.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="connectwithme">
-                        <div class="container-fluid">
+                
+                <div class="profilepicandlinks animated pulse">
+                    <img src="img/profile.png">
+                    <div class="connectwithme animated fadeInDown">
                             <div class="row">
                             
                                 <div class="col-md-1"></div>
+                                <div class="col-md-3">
+                                    <p><a href="https://runningforthewind.files.wordpress.com/2014/11/thomasalexanderryan_resume.pdf">resume</a> &nbsp;</p>
+                                </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-3">
+                                    <p><a href="http://www.seelio.com/alexryan">seelio</a> &nbsp;</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><a href="http://runningforthewind.wordpress.com/">blog</a></p>
+                                </div>
+                                <!-- <div class="col-md-1"></div>
                                 <div class="outsidelink col-md-4">  
-                                    <h1>Personal Blog</h1>
-                                    <i class="fa fa-paper-plane fa-4x"></i>
+                                    <h1>Blog</h1>
+                                    <i class="fa fa-paper-plane fa-2x"></i>
                                     <a href="http://runningforthewind.wordpress.com/">runningforthewind.com/</a>
                                 </div>
                                 <div class="col-md-2"></div>
 
                                 <div class="outsidelink col-md-4">
                                     <h1>Seelio</h1>
-                                    <i class="fa fa-align-left fa-4x"></i>
+                                    <i class="fa fa-align-left fa-2x"></i>
                                     <a href="http://seelio.com/alexryan">http://seelio.com/alexryan</a>
                                 </div>
                                 <div class="col-md-1"></div>
+                                <div class="col-md-2"></div> -->
                            
                             </div>
+                    </div>
+                </div>
+            
+                <div class="aboutmetext postFadeIn">
+                    <h1>What's up?</h1>
+                    <p>I’m a student pursuing a career in smart grid technology that blends my passion for sustainability, design, and mobile development.  At Clemson, I co-founded the Student Sustainability Initiative to catalyze and fund student-led sustainability projects on campus.  Once I finish school, I’ve got my eyes on California and won’t look back.</p>
+                    
+                    <!--<div class="latesttweets">
+                        <div class="row">
+                            <i class="fa fa-twitter fa-4x"></i>
+                            <p>Listen to those that don't share the same worldview as you.  You might just learn something.</p>
                         </div>
                     </div>
+                    -->
+                    
+
                 </div>
             </div>
             
-            <div class="row">
-                <div class="footer?"></div>
-            
-            
-            </div>
             
         </div>
     </div>
@@ -157,7 +170,7 @@
     -->
     
     
-  <!--  <div class="box effect7">
+    <!-- <div class="box effect7">
 	   <h3>Effect 7</h3>
     </div> -->
     
@@ -168,16 +181,22 @@
             
             <div class="row">
                 <div class="col-md-12">
-                    <h1>projects.all</h1>
-                    <hr />
+                    <h1>projects</h1>
                 </div>
             </div>
             
-            <div class="row nopadding">
+            <div class="row nopadding firstrowprojects animated fadeInUp">
                 
                 <div class="projecthighlight">
                     <div class="box">
+                    <div class="view vieweffectz">
                     <div class="projectimage project1"></div>
+                        <div class="mask">
+                            <h2>description</h2>
+                            <p>A project designed to catalyze sustainability projects on Clemson's campus.  Check out our website to read about the projects we've funded this year.</p>
+                            <a href="http://clemsonssi.org/" class="info">clemsonssi.org</a>
+                        </div>
+                    </div>
                     <h2>Clemson SSI</h2>
                     <p>November 2012</p>
                     </div>
@@ -185,7 +204,13 @@
             
                 <div class="projecthighlight">
                     <div class="box">
+                    <div class="view vieweffectz">
                     <div class="projectimage project2"></div>
+                        <div class="mask">
+                            <h2>description</h2>
+                            <p>iOS app created to augment my morning routine.  Wake provides a quick way to access daily PT routines, your scehdule, and the big dreams you have.</p>
+                        </div>
+                    </div>
                     <h2>Wake for iOS</h2>
                     <p>December 2013</p>
                     </div>
@@ -193,9 +218,63 @@
         
                 <div class="projecthighlight">
                     <div class="box">
+                    <div class="view vieweffectz">
                     <div class="projectimage project3"></div>
+                        <div class="mask">
+                            <h2>description</h2>
+                            <p>I created this website from scratch using HTML, Bootstrap, Adobe Brackets, LESS, and JQuery.  It's a quick way for me to share what I'm working on.</p>
+                        </div>
+                    </div>
                     <h2>MyWebsite</h2>
                     <p>August 2014</p>
+                    </div>
+                </div>
+    
+            </div>
+            
+            <hr />
+            
+            <div class="row nopadding secondrowprojects animated fadeInDown">
+                
+                <div class="projecthighlight">
+                    <div class="box">
+                    <div class="view vieweffectz">
+                    <div class="projectimage project4"></div>
+                        <div class="mask">
+                            <h2>description</h2>
+                            <p>Semester-long project to create a Clemson microgrid from historical load and weather data.  I created the visualization - see more on my Seelio profile.</p>
+                        </div>
+                    </div>
+                    <h2>Microgrid Visualization</h2>
+                    <p>November 2014</p>
+                    </div>
+                </div>
+            
+                <div class="projecthighlight">
+                    <div class="box">
+                    <div class="view vieweffectz">
+                    <div class="projectimage project5"></div>
+                        <div class="mask">
+                            <h2>description</h2>
+                            <p>Working with the Clemson University endowment CFO to explore divestment options for Clemson Unviversity.  Conducted research and presented original report. </p>
+                        </div>
+                    </div>
+                    <h2>Divestment</h2>
+                    <p>December 2014</p>
+                    </div>
+                </div>
+        
+                <div class="projecthighlight">
+                    <div class="box">
+                    <div class="view vieweffectz">
+                    <div class="projectimage project6"></div>
+                        <div class="mask">
+                            <h2>description</h2>
+                            <p>Once a runner.<br> <br> Georgia Elite High School Cross Country.  1:28:56 Half.  Two-time finisher of the Sweetwater 50K. </p>
+                        </div>
+                    </div>
+                    <h2>Running</h2>
+                    <p>Lifetime</p>
                     </div>
                 </div>
     
@@ -216,7 +295,7 @@
             </div>
         </div>
         
-        <div class="row">
+        <div class="row postFadeIn">
             <div class="leftside">
             <div class="feature">
                 <h4>Home View</h4>
@@ -230,7 +309,7 @@
             
             
         
-            <div class="rightside">
+            <div class="rightside postFadeIn">
             <div class="feature">
                 <h4>Dream</h4>
                 <p>Capture your dreams and remind yourself each day.</p>
@@ -241,7 +320,7 @@
             </div>
             </div>
             
-            <div id="appimage"></div>
+            <div class="appimage postFadeIn2"></div>
 
         </div>
     </div>
@@ -266,51 +345,100 @@
     
         
         <div class="people">
-        <div class="row nopadding">
-            <div class="col-md-3 nopadding person person-1">
+        <div class="row nopadding postFadeIn">
+            <div class="col-md-3 nopadding person person-1 postFadeIn" data-offset="200">
                 <div class="person-info">
                     <h3>Elon Musk</h3>
                     <p>Founder of Tesla and Space-X.  Innovator.</p>
                 </div>
             </div>
-            <div class="col-md-3 nopadding person person-2">
+            <div class="col-md-3 nopadding person person-2 postFadeIn" data-offset="300">
                 <div class="person-info">
                     <h3>Craig Alexander</h3>
                     <p>World's Fastest Triathlete.  Athlete.</p>
                 </div>
             </div>
             
-            <div class="col-md-3 nopadding person person-3">
+            <div class="col-md-3 nopadding person person-3 postFadeIn" data-offset="400">
                 <div class="person-info">
                     <h3>Bono</h3>
                     <p>Frontman for the band U2.  World-Changer.</p>
                 </div>
             </div>
-            <div class="col-md-3 nopadding person person-4">
+            <div class="col-md-3 nopadding person person-4 postFadeIn" data-offset="500">
                 <div class="person-info">
                     <h3>Louie Giglio</h3>
                     <p>Founder of the Passion Movement.  Creator.</p>
                 </div>
             </div>
         </div>
+            
+        <div class="row nopadding">
+            <div class="col-md-6 nopadding person person-5">
+                <div class="person-info">
+                    <h3>Anton Krupicka</h3>
+                    <p>Ultrarunner - Winner of Leadville 100.</p>
+                </div>
+            </div>
+            <div class="col-md-6 nopadding person person-6">
+                <div class="person-info">
+                    <h3>Tim Keller</h3>
+                    <p>Theologian - Apologetic - New York City.</p>
+                </div>
+            </div>
+        </div>        
         </div>
         
         
     </div>
     </div>
+    
+    
+    
+    
+    
+    
     
     
     <div id="travelhighlight">
         <div class="container-fluid">
             <div class="row nopadding">
                 <div class="col-xs-12">
-                    <p>"To move, to breathe, to fly, to float, <br /> To gain all while you give, <br /> To roam the roads of lands remote, <br /> To travel is to live." <br /> <br /> - Hans Christian Anderson </p>
+                    <h1>Glacier National Park circa 2014</h1>
+                    <p>Morning view of Lake McDonald on day 2 of a week-long backpacking trip with my brother in the Montanta backcountry.</p>
                 </div>
             </div>
         </div>
     </div>
 
     
+   
+   
+    <div id="footer">
+        <div class="container-fluid">
+            <div class="row nopadding">
+                <div class="col-xs-12">
+                
+                    <p>I don't look too hot on a mobile browser - check me out on a desktop.  Mobile support coming soon.</p>
+                
+                </div>
+            
+            
+            </div>
+            
+        </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    <!--
+
+"To move, to breathe, to fly, to float, <br /> To gain all while you give, <br /> To roam the roads of lands remote, <br /> To travel is to live." <br /> <br /> - Hans Christian Anderson
+
+
     <div id="travel">
         <div class="container-fluid">
         <div class="row nopadding">
@@ -325,7 +453,6 @@
 
     
     </div>
-    
     
     
     <div id="travel2">
@@ -343,12 +470,19 @@
     
     
     <p>Built using Bootstrap, Javascript, LESS, Font Awesome,</p>
-    
+    -->
 
     
         <!-- Include jQuery and bootstrap JS plugins -->
 
+    <script type="text/javascript" src="js/customjavascript.js"></script>
+    <script src="js/jquery.viewportchecker.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
+<script type="text/javascript">
+            
+</script>
+    
 </body>
 
 
