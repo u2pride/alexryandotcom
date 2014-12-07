@@ -1,0 +1,1190 @@
+//Import Bootstrap Responsive and Font-Awesome Icons
+@import "bootstrap/bootstrap.less";
+@import "font-awesome/font-awesome.less";
+ 
+
+// Single primary color that all mixins use. Str8 ballin.
+@primary:        hsl(202, 100%, 50%);
+ 
+// Primary Variants -
+@primaryLight:   hsl(hue(@primary), 100%, 70%);
+@primaryDark:    hsl(hue(@primary), 60%, 40%);
+@primaryFaded:   hsl(hue(@primary), 60%, 65%);
+ 
+// 180degree Variants
+@variant:         spin((@primary), 180);
+@variantLight:    hsl(hue(@variant), 100%, 70%);
+@variantDark:     hsl(hue(@variant), 60%, 40%);
+@variantFaded:    hsl(hue(@variant), 60%, 65%);
+ 
+// 90degree Variants
+@corner:         spin((@primary), 70);
+@cornerLight:    hsl(hue(@corner), 100%, 70%);
+@cornerDark:     hsl(hue(@corner), 60%, 40%);
+@cornerFaded:    hsl(hue(@corner), 60%, 65%);
+
+
+//Import Fonts
+@import url(http://fonts.googleapis.com/css?family=Alegreya+Sans:100,300,400,500,700);
+@import url(http://fonts.googleapis.com/css?family=Lobster|Merienda+One|Vibur|Kalam:400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Rambla:400,700|Josefin+Sans:100,300,400|Kalam:700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100);
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+
+// ----------------------------------------------- MAIN LESS ------------------------------------------------------------
+
+//.template {
+    /* rules for mobile vertical (< 480) */
+
+    //@media (min-width: @screen-hs-min) {
+       /* rules for mobile horizontal (480 > 768)  */
+    //}
+    //@media (min-width: @screen-sm-min) {
+       /* rules for tablet (768 > 992) */
+    //}
+    //@media (min-width: @screen-md-min) {
+       /* rules for desktop (992 > 1200) */
+    //}
+    //@media (min-width: @screen-lg-min) {
+       /* rules for large (> 1200) */
+    //}
+//}
+
+
+
+html {
+    margin: 0em 0em 0em 0em;
+    padding: 0em 0em 0em 0em;
+    width: 100%;
+}
+h1, h2, h3, h4 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+body {
+    background: url('../img/montana.jpg') center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+black {
+	background: #000;
+}
+
+*[class^="prlx"] {
+  position: absolute;
+  width: 100%;
+  height: 110%;
+  z-index: -1;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.img-thumbnail {
+    border-radius: 0;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.prlx-1{ 
+    background: url('../img/header.png') repeat; 
+    min-height: 1500px;
+    width: 100%;
+    background-size: cover;
+}
+
+.one-edge-shadow {
+	-webkit-box-shadow: 0 6px 6px -6px gray;
+	   -moz-box-shadow: 0 6px 6px -6px gray;
+	        box-shadow: 0 6px 6px -6px gray;
+    
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+
+.center-block {float: none !important}
+
+
+
+.hiddentwo {
+	opacity: 0;
+}
+
+.visibletwo {
+	opacity: 1;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container {
+    .row {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+
+// ----------------------------------------------- HEADER LESS ------------------------------------------------------------
+
+
+#header {
+    background-size: cover;
+    min-height: 800px;
+    width:100%;
+    
+    .name {
+        animation-delay: 0.5s;
+        -webkit-animation-delay: 0.5s; /* Safari and Chrome */
+        animation-duration: 3s;
+        -webkit-animation-duration: 3s; /* Safari and Chrome */
+    }
+    
+    .bio {
+        animation-delay: 1.5s;
+        -webkit-animation-delay: 1.5s; /* Safari and Chrome */
+        animation-duration: 4.5s;
+        -webkit-animation-duration: 4.5s; /* Safari and Chrome */
+    }
+
+    h1 {
+        padding: 1em 0em 0em 0em;
+        text-align: center;  
+        color: #fff;
+        font-family: 'Merienda One', sans-serif;
+        font-size: 10em;
+        font-weight: 500;
+        @media(min-width:@screen-tablet) {
+            text-align: right;
+            font-size: 8em;
+            padding: 2em 0em 0em 0em;
+
+        }
+    }
+    
+    h2 {
+        padding: 0em 0em 0em 0em;
+        text-align: center;  
+        color: #fff;
+        font-family: 'Kalam', sans-serif;
+        font-size: 2em;
+        font-weight: 100;
+        line-height: 1;
+        text-shadow: 0 1px 2px rgba(0,0,0,.2);
+        @media (min-width:@screen-tablet) {
+            text-align: left;
+            font-size: 5em;
+            padding: 2.7em 0em 0em 0em;
+        }
+    }
+}
+
+#aboutmetext {
+    text-align: center;
+    color: #fff;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-size: 2em;
+    margin-top: 4.5em;
+    font-weight: 100;
+    min-height: 30px;
+}
+
+#imageIcons {
+    margin-top: 2em;
+    color: white;
+    visibility: hidden;
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    hr {
+        margin-top: 3em;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 2px;
+        background-color:#f3f6db;
+        color:#f3f6db;
+    }
+}
+    
+
+#imageIcons .col-xs-1 {
+    top: 10%;
+}
+
+#imageIcons .container-fluid {
+    margin: auto; 
+    max-width: 1600px;
+}
+
+
+.backgroundimage {
+    background: url('../img/montana.jpg');
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+// ----------------------------------------------- ABOUT ME LESS ------------------------------------------------------------
+
+#aboutme {
+    min-height: 300px;
+    background-color: #fff;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0em;
+
+    
+    .profilepicandlinks {
+        .make-md-column(6);
+        
+        animation-duration: 3s;
+        -webkit-animation-duration: 3s;
+
+        animation-delay: 1s;
+        -webkit-animation-delay: 1s;
+
+        background-color: #0ff;
+        position: relative;
+        
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .connectwithme {
+            
+            position: absolute;
+            top: 23em;
+            margin: 0 auto;
+            animation-delay: 1.7s;
+            -webkit-animation-delay: 1.7s; /* Safari and Chrome */
+            
+            .outsidelink {
+                box-shadow: 0px 0px 7px #888;
+            
+                &:hover { 
+                    cursor: pointer;
+                    cursor: hand;
+                    opacity: 0.8;
+                }
+            }
+            
+            p {
+                font-family: 'Kalam';
+                font-weight: 100;
+                font-size: 4em;
+                color: #00788D;
+                text-align: center;
+            }
+            
+            i {
+                text-align: center;
+                width: 100%;
+                padding-top: 0em;
+                padding-bottom: 0.3em;
+            }
+            
+            h1 {
+                font: 'Lato', sans-serif;
+                font-weight: 700;
+                font-size: 2em;
+                color: #00788D;
+                text-align: center; 
+            }
+            
+            a {
+                font-weight: 200;
+                font-size: 1.0em;
+                color: #00788D;
+                width: 100%;
+                margin: 0 auto;
+                float: none;
+                display: inline-block;
+                text-align: center;
+                margin-bottom: 1.5em;
+            }
+        
+            
+        }
+    }
+    
+
+
+    .aboutmetext {
+        .make-md-column(6);
+        
+        padding-top: 2em;
+        padding-left: 2em;
+        padding-right: 1em;
+        margin-bottom: 7em;
+        
+        
+        h1 {
+            font-size: 5.5em;
+            font: 'Lato','Josefin Sans', sans-serif;
+            font-weight: 100;
+            padding-bottom: 0.3em;
+        }
+    
+        h2 {
+        }
+    
+        p {
+            font-size: 1.7em;
+            padding-right: 0em;
+            color: #707070;
+        }
+        
+        .latesttweets {
+            
+            background-color: #00788D;
+            margin-top: 3em;
+            border-radius: 4px;
+            margin-bottom: 4em;
+            
+            i {
+                .make-md-column(2);
+                padding-left: 0.8em;
+                padding-top: 0.2em;
+                color: #fff;
+
+            }
+            p {
+                .make-md-column(10);
+                
+                padding-top: 0.7em;
+                padding-left: 1.5em;
+                padding-right: 1.5em;
+                font-size: 1.2em;
+                color: #fff;
+                
+            }
+        
+        }
+        
+    }
+
+
+}
+
+
+/*==================================================
+ * Currently not being used
+ * ===============================================*/
+
+// BOX SHADOW EFFECT
+
+
+
+
+
+.effect7
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect7:before, .effect7:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.effect7:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+
+.middle .container {
+    background-color: #fff;
+    background-size: contain;
+}
+
+.middle .container h1 {
+    min-height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #00788D;
+    font-size: 4em;
+    font-family: 'Kalam';
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+}
+
+
+
+// ----------------------------------------------- Projects LESS ------------------------------------------------------------
+
+#projectgallery {
+   
+    background: url('../img/travel.png');
+    background-size: contain;
+    box-shadow: inset 0px 10px 20px -2px rgba(0,0,0,0.6);
+
+    h1 {
+        font-family: 'Vibur'; 
+        text-align: center;
+        font-size: 6em;
+        font-weight: 100;
+        color: #fff;
+        margin-top: 0.3em;
+    }
+    
+    .firstrowprojects {
+        animation-delay: 2.5s;
+        -webkit-animation-delay: 4.5s; /* Safari and Chrome */    
+        animation-duration: 0.5s;
+        -webkit-animation-duration: 0.5s; /* Safari and Chrome */ 
+
+    }
+    
+    .secondrowprojects {
+        animation-delay: 2.5s;
+        -webkit-animation-delay: 4.5s; /* Safari and Chrome */ 
+        animation-duration: 0.5s;
+        -webkit-animation-duration: 0.5s; /* Safari and Chrome */ 
+
+    }
+    
+    .projecthighlight{
+        .make-md-column(4);
+        padding: 2em;
+        
+        .view {
+            width: 100%;
+            height: 100%;
+            float: left;
+            border: 1px solid #fff;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            cursor: default;
+            background: #fff url(../img/timkeller.jpg) no-repeat center center;            
+            
+            
+            h2 {
+                text-align: center;
+                position: relative;
+                font-size: 17px;
+                padding: 10px;
+                background: rgba(0,0,0, 0.8);
+                margin: 20px 0 0 0;
+            }
+            
+            p {
+                font-size: 1.25em;
+                position: relative;
+                color: #fff;
+                padding: 15px 20px 10px;
+                text-align: center;
+            }
+            
+            img {
+                display: block;
+                position: relative;
+            }
+            
+            a.info {
+                display: inline-block;
+                padding: 5px 14px;
+                background: rgba(0,0,0, 0.4);
+                color: #fff;
+                box-shadow: 0 0 1px #000;
+            }
+            
+            a.info:hover {
+                box-shadow: 0 0 5px #000;   
+            }
+        }
+        
+        
+        .view .mask, .view .content {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+        }
+        
+        .vieweffectz {
+        
+            img {
+                transform: scaleY(1);
+                transition: all 0.7s ease-in-out;
+            }
+        
+            .mask {
+                background-color: rgba(255, 255, 255, 0.9);
+                transition: all 0.5s linear;
+                opacity: 0;
+            }
+            
+            h2 {
+                border-bottom: 1px solid rgba(0,0,0,0.3);
+                background: transparent;
+                margin: 20px 40px 0 40px;
+                transform: scale(0);
+                color: #333;
+                transition: all 0.5s linear;
+                opacity: 0;
+            }
+            
+            p {
+                color: #333;
+                opacity: 0;
+                transform: scale(0);
+                transition: all 0.5s ease-in;
+            }
+            
+            a.info {
+                opacity: 0;
+                transform: scale(0);
+                transition: all 0.5s linear;
+            }
+        
+        
+        }
+        
+        .vieweffectz:hover img {
+            transform: scale(10);
+            opacity: 0;
+        }
+        
+        .vieweffectz:hover .mask {
+            opacity: 1;   
+        }
+        
+        .vieweffectz:hover h2,
+        .vieweffectz:hover p,
+        .vieweffectz:hover a.info {
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+
+        
+        
+        .box {            
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            border-radius: 1.5em;
+            margin:40px auto;
+            
+            h2 {
+                text-align: center;   
+                border-top: 3px solid rgba(0,0,0,1.0);
+                padding-top: 0.5em;
+                margin: 0em;
+
+            }
+            .projectimage {
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                min-height: 250px;
+                overflow: hidden;
+                position: static;
+            }
+            
+            .project1 {
+                background-image: url('../img/project1.png');
+            }
+            
+            .project2 {
+                background-image: url('../img/project2.png');
+            }
+            
+            .project3 {
+                background-image: url('../img/project3.png');
+            }
+        
+            p {
+                text-align: center;
+            }
+        }
+        
+        
+
+        
+    }
+}
+
+
+
+
+
+// ----------------------------------------------- WAKE iOS APP LESS ------------------------------------------------------------
+
+
+#iosapp {
+    margin-top: 0em;
+    padding-bottom: 3em;
+    background-color: rgba(255,255,255,1.0);
+    box-shadow: inset 0px 10px 20px -2px rgba(0,0,0,0.6);
+
+    .appimage {
+        .make-md-column(4);
+        .make-xs-column(12);
+        //.one-edge-shadow();
+
+        background:url('../img/wakeIphone.png');
+        border-radius: 1px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: auto;
+        min-height: 500px;
+        padding: 1em 0em 0em 0em;
+        width: 100%;
+        margin-top: 3em;
+        
+    }
+    
+    h1 {
+        font-family: 'Vibur';
+        text-align: center;
+
+        @media (min-width: @screen-xs-min) {
+            /* rules for phone  */
+            font-size: 2.5em;
+        }
+        @media (min-width: @screen-sm-min) {
+            /* rules for tablet (768 > 992) */
+            font-size: 5em;
+        }
+        @media (min-width: @screen-md-min) {
+            /* rules for desktop (992 > 1200) */
+            font-size: 6em;
+        }
+        @media (min-width: @screen-lg-min) {
+            /* rules for large desktop (> 1200) */
+        }
+	}
+
+
+    hr {
+        margin-top: 1em;  
+        margin-bottom: 2em;
+        height: 3px;
+        border-radius: 3px;
+        background-color:#0f5959;
+        color:#0f5959;
+    }
+    
+    .feature {
+       
+        border-left: 2px solid rgba(0,0,0,1.0);
+        
+        @media (min-width: @screen-xs-min) {
+            /* rules for phone  */
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+        @media (min-width: @screen-sm-min) {
+            /* rules for tablet (768 > 992) */
+            margin-top: 3em;
+            margin-bottom: 4em;
+        }
+        @media (min-width: @screen-md-min) {
+            /* rules for desktop (992 > 1200) */
+            margin-top: 6em;
+            margin-bottom: 4em;
+        }
+        @media (min-width: @screen-lg-min) {
+            /* rules for large desktop (> 1200) */
+        }
+        
+                
+        h4 {
+            font-weight: 500;
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 1.5em;
+            padding-left: 10px;
+
+            
+            @media (min-width: @screen-xs-min) {
+                /* rules for phone  */
+            }
+            @media (min-width: @screen-sm-min) {
+                /* rules for tablet (768 > 992) */
+                font-size: 2.5em;
+            }
+            @media (min-width: @screen-md-min) {
+                /* rules for desktop (992 > 1200) */
+                font-size: 2.5em;        
+            }
+            @media (min-width: @screen-lg-min) {
+                /* rules for large desktop (> 1200) */
+            }
+        }
+        
+        p {
+            font-size: 0.9em;
+            font-weight: 200;
+            padding-left: 10px;
+            color: #909090;
+            
+            @media (min-width: @screen-xs-min) {
+                /* rules for phone  */
+                font-size: 1.5em;
+            }
+            @media (min-width: @screen-sm-min) {
+                /* rules for tablet (768 > 992) */
+                font-size: 1.5em;
+            }
+            @media (min-width: @screen-md-min) {
+                /* rules for desktop (992 > 1200) */
+                font-size: 1.5em;
+            }
+            @media (min-width: @screen-lg-min) {
+                /* rules for large desktop (> 1200) */
+            }
+        }
+    }
+    
+    .leftside {
+        .make-xs-column(6);
+        .make-sm-column(6);
+        .make-md-column(4);
+    }
+    .rightside {
+        .make-xs-column(6);
+        .make-sm-column(6);
+        .make-md-column(4);
+    }
+
+}
+
+
+
+// ----------------------------------------------- INSPIRATION LESS ------------------------------------------------------------
+
+#inspiration {
+    background: url('../img/peoplebackground.png');
+    background-size: contain;
+    background-color: #343434;
+    box-shadow: inset 0px 0px 20px 5px rgba(0,0,0,0.6);
+
+
+    h1 {
+        color: #fff;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        width: 100%;
+        text-align: center;
+        font-family: 'Vibur';
+        font-size: 5em;
+    }
+
+    h2 {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 2em;
+        margin-left: 4em;
+        margin-right: 4em;
+        font-family: 'Merienda One', sans-serif;
+        font-size: 2.5em;
+        font-weight: 300;
+    }
+
+    h3 {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 1em;
+        margin-left: 0em;
+        margin-right: 0em;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 3em;
+        font-weight: 100;
+    }
+
+    p {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 1em;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 1.2em;
+        font-weight: 300;
+    }
+}
+
+.people {
+    text-align: center;
+    width: 100%;
+}
+
+.person {
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 250px;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    transition: all 0.4s ease-in-out;
+}
+
+
+
+.person-info {
+    position: absolute;
+    background: rgba(63,147,147, 0.8);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    transform: scale(0);
+}
+
+.person-1 {
+   background-image:url('../img/elonmono.jpg');
+} 
+
+.person-2 {
+   background-image:url('../img/craigalexander.jpg');
+} 
+
+.person-3 {
+    background-image:url('../img/bono.jpg');
+    box-shadow: inset 10px 0px 10px -2px rgba(0,0,0,0.5);
+
+} 
+
+.person-4 {
+   background-image:url('../img/louiemono.jpg');
+} 
+
+.person-5 {
+    background-image:url('../img/antonmono.jpg');
+    p {
+        font-size: 3em;
+    }
+}
+
+.person-6 {
+    background-image:url('../img/timkeller2mono.jpg');
+    box-shadow: inset 10px 0px 10px -2px rgba(0,0,0,0.5);
+    p {
+        font-size: 3em;
+    }
+}
+
+.person-info h3 {
+    color: #fff;
+    padding: 1em 0em 0em 0em;
+}
+
+.person-info p {
+    color: #fff;
+    padding: 10px 5px;
+    font-style: italic;
+    margin: 0 20px;
+    font-size: 1em;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    opacity: 0;
+    transition: all 1s ease-in-out 0.4s;
+}
+
+.person:hover .person-info {
+    transform: scale(0.9);
+    opacity: 1;
+}
+.person:hover .person-info p {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+//Background Montana Image and Quote
+#travelhighlight {
+    h1 {
+        font-family: 'Merienda One', sans-serif;
+        font-size: 3em;
+        margin-top: 20em;
+        padding-right: 100px;
+        padding-left: 100px;
+        text-align: left;
+        color: #fff;
+        
+    } 
+    
+    p {
+        font-family: 'Lato', sans-serif;
+        font-size: 2em;
+        margin-top: 1em;
+        margin-bottom: 4em;
+        padding-right: 18em;
+        padding-left: 100px;
+        text-align: left;
+        color: #fff;
+        
+    } 
+    
+}
+
+/* Attempt at LESS/Bootstrap
+#iosapp {
+    
+    margin-top: 3em;
+    padding-bottom: 3em;
+    background-color: #fff;
+    width: 100%;
+    
+    .headerinfo {
+        .make-row();
+        
+        .headercontent {
+            .make-md-column(12);
+
+            h1 {
+                text-align: center;
+                font-family: 'Vibur';
+                font-size: 5em;
+            }
+        }
+        
+    }
+    
+    .iosappdescription {
+    
+        .left-features {
+            make-md-column(4);
+        }
+        
+        .appimage {
+            background:url('../img/iosapp.png');
+            border-radius: 1px;
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-clip: content-box;
+            height: auto;
+            min-height: 500px;
+            padding: 1em 0em 0em 0em;
+            width: 100%;
+            
+            .make-md-column(4);
+        }
+        
+        .right-features {
+            .make-md-column(4);
+        }
+        
+        .feature {
+            h4 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 2em;
+                font-weight: 700;          
+            }
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.5em;
+                font-weight: 100;   
+            }
+            
+        }
+    
+    
+    }
+        
+}
+
+*/
+
+/*
+
+<div id="iosapp">  
+    <div class="container">
+        
+        <div class="headerinfo">
+        <div class="headercontent">
+        <h1>- ios app :. wake -</h1>
+        <hr />
+        </div>
+        </div>
+            
+        <div class="iosappdescription">
+        <div class="left-features">
+            <div class="feature">
+                <h4>Home View</h4>
+                <p>Start your day with the weather at a quick glance</p>
+            </div>
+            <div class="feature">
+                <h4>Work Out</h4>
+                <p>Track your workouts with the workout view.</p>
+            </div>
+        </div>
+
+            
+        <div class="appimage"></div>
+        
+        
+        <div class="right-features">
+            <div class="feature">
+                <h4>Dream</h4>
+                <p>Capture your dreams and remind yourself of them each day.</p>
+            </div>
+            <div class="feature">
+                <h4>Calendar</h4>
+                <p>Get a quick glance of your calendar before you start your day.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+*/
+
+
+
+#travel {
+}
+#travel h2 {
+    color: #000;  
+}
+
+
+.destination {
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    min-height: 200px;
+    cursor: default;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+}
+
+.destination-1 {
+
+}
+
+.destination-2 {
+}
+
+.destination-info {
+    opacity: 0;
+    transition: all 1.4s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(63,147,147, 0.8);
+    text-align: center;
+}
+
+.destination-info h3 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    padding-bottom: 1em;
+    border-bottom: 4px solid rgba(255,255,255,0.5);
+    width: 40%;
+}
+
+.destination-info p {
+    color: #fff;
+    opacity: 0;
+    transition: all 1s ease-in-out 0.5s;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.destination:hover .destination-info {
+    transform: translate(10em,0);
+    opacity: 0;
+}
+
+.destination:hover .destination-info p {
+    opacity: 0;
+}
+
+
+
+
+
+
+
+
+#footer {
+    background-color: #ffffff;
+    box-shadow: inset 0px 10px 20px -2px rgba(0,0,0,0.6);
+
+    
+    p {
+        text-align: center;
+        font-size: 1.4em;
+        margin: 3em;
+        font-family: "Lato";
+    }
+}
+
+.project5 {
+    background-image: url('../img/project5.png');
+}
+
+.project4 {
+    background-image: url('../img/project4.png');
+}
+
+.project6 {
+    background-image: url('../img/project6.png');
+}
