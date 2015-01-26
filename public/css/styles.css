@@ -7867,11 +7867,6 @@ p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
 }
-body {
-  background: url('../img/montana.jpg') center center;
-  background-attachment: fixed;
-  background-size: cover;
-}
 black {
   background: #000;
 }
@@ -8224,8 +8219,8 @@ black {
   margin-top: 0.3em;
 }
 #projectgallery .firstrowprojects {
-  animation-delay: 2.5s;
-  -webkit-animation-delay: 4.5s;
+  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
   /* Safari and Chrome */
   animation-duration: 0.5s;
   -webkit-animation-duration: 0.5s;
@@ -8875,4 +8870,13 @@ black {
 }
 .project6 {
   background-image: url('../img/project6.png');
+}
+#bg {
+  position: fixed;
+  z-index: -3000;
+  top: -150px;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
 }
