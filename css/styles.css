@@ -7922,6 +7922,7 @@ black {
   margin-right: -15px;
 }
 #header {
+  background: url('../img/header.png') repeat;
   background-size: cover;
   min-height: 800px;
   width: 100%;
@@ -8043,6 +8044,8 @@ black {
 #aboutme .profilepicandlinks img {
   position: absolute;
   top: 50%;
+  margin-left: 3em;
+  width: 80%;
   display: inline-block;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
